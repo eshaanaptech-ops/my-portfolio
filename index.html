@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h2 class="logo">Port<span>folio.</span></h2>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="menu" id="menu">☰</div>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="intro">HELLO, I'M</p>
+            <h1>Your <span>Name</span></h1>
+            <h2>I'm a <span id="typing"></span></h2>
+
+            <p class="description">
+                I create beautiful, modern and responsive websites. I love turning creative ideas into amazing digital experiences.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#projects" class="btn">View My Work</a>
+                <a href="#contact" class="btn btn-outline">Contact Me</a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <div class="circle">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600" alt="Profile Photo">
+            </div>
+        </div>
+    </section>
+
+    <section class="about section" id="about">
+        <h2 class="heading">About <span>Me</span></h2>
+
+        <div class="about-content">
+            <h3>Frontend Web Developer</h3>
+            <p>
+                I'm a passionate web developer who enjoys creating beautiful and user-friendly websites. I work with HTML, CSS and JavaScript to build responsive web experiences.
+            </p>
+            <a href="#contact" class="btn">Let's Talk</a>
+        </div>
+    </section>
+
+    <section class="skills section" id="skills">
+        <h2 class="heading">My <span>Skills</span></h2>
+
+        <div class="skills-container">
+            <div class="skill">
+                <h3>HTML <span>90%</span></h3>
+                <div class="progress">
+                    <div style="width:90%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <h3>CSS <span>85%</span></h3>
+                <div class="progress">
+                    <div style="width:85%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <h3>JavaScript <span>75%</span></h3>
+                <div class="progress">
+                    <div style="width:75%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <h3>Bootstrap <span>80%</span></h3>
+                <div class="progress">
+                    <div style="width:80%"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects section" id="projects">
+        <h2 class="heading">My <span>Projects</span></h2>
+
+        <div class="project-container">
+            <div class="project-card">
+                <div class="project-icon">🌐</div>
+                <h3>Website Design</h3>
+                <p>A modern and responsive business website.</p>
+                <a href="#">View Project →</a>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">🛒</div>
+                <h3>E-Commerce</h3>
+                <p>An attractive online shopping website.</p>
+                <a href="#">View Project →</a>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">💻</div>
+                <h3>Portfolio Website</h3>
+                <p>A personal portfolio with modern animations.</p>
+                <a href="#">View Project →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact section" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+
+        <form id="contactForm">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="text" placeholder="Subject" required>
+            <textarea rows="6" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2026 Your Name | All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
