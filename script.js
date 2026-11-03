@@ -1,32 +1,35 @@
-// Mobile Menu
-const menu = document.getElementById("menu");
-const navLinks = document.getElementById("navLinks");
+// Mobile Navigation
+const menuBtn = document.getElementById("menu-btn");
+const navLinks = document.getElementById("nav-links");
 
-menu.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
+menuBtn.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("active");
+    menuBtn.textContent = isOpen ? "✕" : "☰";
+    menuBtn.setAttribute("aria-expanded", isOpen);
 });
 
-// Close menu after clicking a link
-document.querySelectorAll(".nav-links a").forEach(link => {
+// Close menu when a navigation link is clicked
+document.querySelectorAll("#nav-links a").forEach((link) => {
     link.addEventListener("click", () => {
         navLinks.classList.remove("active");
+        menuBtn.textContent = "☰";
+        menuBtn.setAttribute("aria-expanded", "false");
     });
 });
 
-// Typing Animation
-const words = [
-    "Web Developer",
-    "Frontend Developer",
-    "Creative Designer"
-];
+// Automatically update footer year
+document.getElementById("year").textContent = new Date().getFullYear();
 
-let wordIndex = 0;
+// Typing effect
+const typingElement = document.getElementById("typing");
+const roles = ["Web Developer", "Frontend Developer", "Creative Coder"];
+
+let roleIndex = 0;
 let charIndex = 0;
 let deleting = false;
 
 function typeEffect() {
-    const typing = document.getElementById("typing");
-    const currentWord = words[wordIndex];
+    const currentRole = roles[roleIndex];
 
     if (deleting) {
         charIndex--;
@@ -34,31 +37,20 @@ function typeEffect() {
         charIndex++;
     }
 
-    typing.textContent = currentWord.substring(0, charIndex);
+    typingElement.textContent = currentRole.substring(0, charIndex);
 
-    let speed = deleting ? 60 : 120;
+    let delay = deleting ? 55 : 100;
 
-    if (!deleting && charIndex === currentWord.length) {
+    if (!deleting && charIndex === currentRole.length) {
         deleting = true;
-        speed = 1200;
-    }
-
-    if (deleting && charIndex === 0) {
+        delay = 1400;
+    } else if (deleting && charIndex === 0) {
         deleting = false;
-        wordIndex = (wordIndex + 1) % words.length;
-        speed = 400;
+        roleIndex = (roleIndex + 1) % roles.length;
+        delay = 400;
     }
 
-    setTimeout(typeEffect, speed);
+    setTimeout(typeEffect, delay);
 }
 
 typeEffect();
-
-// Contact Form Demo
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    alert("Thank you! Your message has been received.");
-
-    this.reset();
-});

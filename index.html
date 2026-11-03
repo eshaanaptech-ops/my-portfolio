@@ -4,140 +4,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>My Portfolio | Web Developer</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
+    <!-- Navbar -->
     <header>
         <nav class="navbar">
-            <h2 class="logo">Port<span>folio.</span></h2>
+            <a href="#home" class="logo">Dev<span>Portfolio.</span></a>
 
-            <ul class="nav-links" id="navLinks">
+            <button class="menu-btn" id="menu-btn" aria-label="Toggle navigation">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="nav-contact">Contact</a></li>
             </ul>
-
-            <div class="menu" id="menu">☰</div>
         </nav>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <p class="intro">HELLO, I'M</p>
-            <h1>Your <span>Name</span></h1>
-            <h2>I'm a <span id="typing"></span></h2>
+            <p class="welcome">WELCOME TO MY PORTFOLIO</p>
+
+            <h1>Hi, I'm <span>Your Name</span></h1>
+
+            <h2>I'm a <span id="typing">Web Developer</span></h2>
 
             <p class="description">
-                I create beautiful, modern and responsive websites. I love turning creative ideas into amazing digital experiences.
+                I create clean, modern and responsive websites. I love turning creative ideas into amazing digital experiences.
             </p>
 
             <div class="hero-buttons">
                 <a href="#projects" class="btn">View My Work</a>
                 <a href="#contact" class="btn btn-outline">Contact Me</a>
             </div>
+
+            <div class="social-links">
+                <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            </div>
         </div>
 
         <div class="hero-image">
-            <div class="circle">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600" alt="Profile Photo">
+            <div class="image-circle">
+                <div class="code-icon">&lt;/&gt;</div>
             </div>
+            <div class="floating-card">💻 Web Developer</div>
         </div>
     </section>
 
-    <section class="about section" id="about">
-        <h2 class="heading">About <span>Me</span></h2>
+    <!-- About Section -->
+    <section class="section" id="about">
+        <p class="section-label">GET TO KNOW ME</p>
+        <h2 class="section-title">About <span>Me</span></h2>
 
-        <div class="about-content">
-            <h3>Frontend Web Developer</h3>
+        <div class="about-card">
+            <h3>Aspiring Web Developer</h3>
             <p>
-                I'm a passionate web developer who enjoys creating beautiful and user-friendly websites. I work with HTML, CSS and JavaScript to build responsive web experiences.
+                Hello! I'm a passionate web developer who enjoys creating beautiful and user-friendly websites. I work with HTML, CSS and JavaScript to build responsive web experiences. I'm always learning new things and improving my skills.
             </p>
             <a href="#contact" class="btn">Let's Talk</a>
         </div>
     </section>
 
-    <section class="skills section" id="skills">
-        <h2 class="heading">My <span>Skills</span></h2>
+    <!-- Skills Section -->
+    <section class="section section-dark" id="skills">
+        <p class="section-label">WHAT I WORK WITH</p>
+        <h2 class="section-title">My <span>Skills</span></h2>
 
-        <div class="skills-container">
-            <div class="skill">
-                <h3>HTML <span>90%</span></h3>
-                <div class="progress">
-                    <div style="width:90%"></div>
-                </div>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-icon html-icon">5</div>
+                <h3>HTML5</h3>
+                <p>Building website structure</p>
             </div>
 
-            <div class="skill">
-                <h3>CSS <span>85%</span></h3>
-                <div class="progress">
-                    <div style="width:85%"></div>
-                </div>
+            <div class="skill-card">
+                <div class="skill-icon css-icon">#</div>
+                <h3>CSS3</h3>
+                <p>Styling and responsive design</p>
             </div>
 
-            <div class="skill">
-                <h3>JavaScript <span>75%</span></h3>
-                <div class="progress">
-                    <div style="width:75%"></div>
-                </div>
-            </div>
-
-            <div class="skill">
-                <h3>Bootstrap <span>80%</span></h3>
-                <div class="progress">
-                    <div style="width:80%"></div>
-                </div>
+            <div class="skill-card">
+                <div class="skill-icon js-icon">JS</div>
+                <h3>JavaScript</h3>
+                <p>Interactive web experiences</p>
             </div>
         </div>
     </section>
 
-    <section class="projects section" id="projects">
-        <h2 class="heading">My <span>Projects</span></h2>
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <p class="section-label">MY RECENT WORK</p>
+        <h2 class="section-title">My <span>Projects</span></h2>
 
-        <div class="project-container">
+        <div class="projects-grid">
             <div class="project-card">
-                <div class="project-icon">🌐</div>
-                <h3>Website Design</h3>
-                <p>A modern and responsive business website.</p>
-                <a href="#">View Project →</a>
+                <div class="project-number">01</div>
+                <h3>Personal Portfolio</h3>
+                <p>A modern and responsive portfolio website.</p>
+                <div class="tags">
+                    <span>HTML</span><span>CSS</span><span>JS</span>
+                </div>
+                <a href="#contact" class="project-link">View Project ↗</a>
             </div>
 
             <div class="project-card">
-                <div class="project-icon">🛒</div>
-                <h3>E-Commerce</h3>
-                <p>An attractive online shopping website.</p>
-                <a href="#">View Project →</a>
+                <div class="project-number">02</div>
+                <h3>Landing Page</h3>
+                <p>A clean landing page for a modern business.</p>
+                <div class="tags">
+                    <span>HTML</span><span>CSS</span><span>JS</span>
+                </div>
+                <a href="#contact" class="project-link">View Project ↗</a>
             </div>
 
             <div class="project-card">
-                <div class="project-icon">💻</div>
-                <h3>Portfolio Website</h3>
-                <p>A personal portfolio with modern animations.</p>
-                <a href="#">View Project →</a>
+                <div class="project-number">03</div>
+                <h3>To-Do App</h3>
+                <p>A simple application to organize daily tasks.</p>
+                <div class="tags">
+                    <span>HTML</span><span>CSS</span><span>JS</span>
+                </div>
+                <a href="#contact" class="project-link">View Project ↗</a>
             </div>
         </div>
     </section>
 
-    <section class="contact section" id="contact">
-        <h2 class="heading">Contact <span>Me</span></h2>
+    <!-- Contact Section -->
+    <section class="section section-dark" id="contact">
+        <p class="section-label">HAVE A PROJECT IN MIND?</p>
+        <h2 class="section-title">Contact <span>Me</span></h2>
 
-        <form id="contactForm">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <input type="text" placeholder="Subject" required>
-            <textarea rows="6" placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
+        <div class="contact-card">
+            <h3>Let's build something great!</h3>
+            <p>Have a project or an opportunity? Feel free to reach out.</p>
+
+            <a href="mailto:yourname@example.com" class="btn">
+                Send Me an Email ↗
+            </a>
+        </div>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>© 2026 Your Name | All Rights Reserved.</p>
+        <p>© <span id="year"></span> Your Name. All rights reserved.</p>
+        <a href="#home">Back to Top ↑</a>
     </footer>
 
     <script src="script.js"></script>
